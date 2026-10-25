@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geckos in the Garden - Creations by Sue D.</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --card-bg: #fdfdfd;
+            --border-color: #e0e0e0;
+            --accent-available: #2e7d32;
+            --accent-retail: #0288d1;
+            --accent-sold: #757575;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 10px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Product Grid Structure */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 300px;
+            background-color: #eaeaea;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin: 0 0 10px 0;
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .badge.available { background-color: #e8f5e9; color: var(--accent-available); }
+        .badge.retail { background-color: #e1f5fe; color: var(--accent-retail); }
+        .badge.sold { background-color: #f5f5f5; color: var(--accent-sold); }
+
+        /* Story & About Layout Blocks */
+        .story-block {
+            margin-bottom: 40px;
+            background-color: #fafafa;
+            padding: 30px;
+            border-left: 4px solid var(--text-color);
+        }
+
+        .story-block h3 {
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #111111;
+            color: #ffffff;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Geckos in the Garden</h1>
+        <p>Hand-Painted Upcycled Functional Furniture & Home Goods by Susan DiGirolamo</p>
+    </header>
+
+    <div class="container">
+
+        <!-- SHOP SECTION: AVAILABLE DIRECTLY -->
+        <div class="section-title">Available Direct from Studio</div>
+        <div class="grid">
+            
+            <!-- Item 1 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="pink-pirouette.jpg" alt="Pink Pirouette">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Pink Pirouette"</div>
+                    <div class="card-desc">Musical jewelry box featuring four pullout drawers, side cabinets, and a top compartment. Beautifully styled.</div>
+                    <div class="card-meta">
+                        <span class="price">$160</span>
+                        <span class="badge available">Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="geckos-table-top.jpg" alt="Geckos in the Garden Table">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Geckos in the Garden"</div>
+                    <div class="card-desc">The ultimate signature piece. Intricately detailed top of a functional home side table.</div>
+                    <div class="card-meta">
+                        <span class="price">$150</span>
+                        <span class="badge available">Available</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="light-me-up.jpg" alt="Light Me Up Lamp">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Light Me Up"</div>
+                    <div class="card-desc">Hand-painted unique structural table lamp bringing crisp contrast and warm light.</div>
+                    <div class="card-meta">
+                        <span class="price">$120</span>
+                        <span class="badge available">Available</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SHOP SECTION: PARTNER GALLERIES -->
+        <div class="section-title">Showcase Pieces at Local Galleries</div>
+        <div class="grid">
+
+            <!-- Item 4 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="serenity-safari.jpg" alt="Serenity on Safari Elephant">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Serenity on Safari"</div>
+                    <div class="card-desc">Stunning statement piece hand-painted wooden elephant. Currently featured locally.</div>
+                    <div class="card-meta">
+                        <span class="price">$360</span>
+                        <span class="badge retail">Gallery One (Grants Pass, OR)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="vintage-velocity.jpg" alt="Vintage Velocity Rocking Chair">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Vintage Velocity"</div>
+                    <div class="card-desc">Beautiful heirloom-quality vintage rocking chair treated with dynamic upcycled styling.</div>
+                    <div class="card-meta">
+                        <span class="price">$420</span>
+                        <span class="badge retail">Gallery One (Grants Pass, OR)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="card">
+                <div class="image-container">
+                    <img src="serenely-spring.jpg" alt="Serenely Spring Lamp">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">"Serenely Spring"</div>
+                    <div class="card-desc">Custom stylized table lamp invoking fresh lines and beautiful minimalist accents.</div>
+                    <div class="card-meta">
+                        <span class="price">$120</span>
+                        <span class="badge retail">Simply Ashland (Ashland, OR)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BACKGROUND & STORY -->
+        <div class="section-title">The Artist Journey</div>
+        
+        <div class="story-block">
+            <h3>How It All Began</h3>
+            <p>A small, forlorn, coffee-stained side table jumpstarted my journey into refurbishing and painting furniture. Rather than restore the table to its original color scheme of forest green and brown, I decided to paint it white and see where a brush dipped in black would take me. As leaves and vines crawled up the legs and flowers bloomed across the top, I immersed myself in peaceful contemplation.</p>
+        </div>
+
